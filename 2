@@ -1,0 +1,176 @@
+<motion.h1
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.35 }}
+      >
+        Ақмоншақ
+        <span>&</span>
+        Нұрсұлтан
+      </motion.h1>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.7 }}
+        className="hero-date"
+      >
+        27 ҚАЗАН 2026
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.9 }}
+        className="hero-line"
+      />
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.1 }}
+      >
+        Біздің махаббатымыздың жаңа тарауын
+        <br />
+        бірге бастаймыз.
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.3 }}
+        className="hero-invite"
+      >
+        Осы ерекше күнімізде сізді
+        <br />
+        қонағымыз болуға шақырамыз.
+      </motion.p>
+
+      <motion.a
+        href="#details"
+        className="scroll-button"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.6 }}
+      >
+        ТӨМЕНГЕ
+        <span>↓</span>
+      </motion.a>
+    </div>
+  </section>
+
+  {/* =====================================
+      INTRO
+  ====================================== */}
+
+  <section className="intro section">
+    <motion.div {...fadeUp} className="section-inner">
+      <div className="ornament">✦</div>
+
+      <p className="eyebrow">ҚАДІРЛІ ҚОНАҚТАР</p>
+
+      <h2>
+        Сізді біздің
+        <br />
+        қуанышымызды бөлісуге
+        <br />
+        шақырамыз
+      </h2>
+
+      <p className="description">
+        Бұл күн — біздің өміріміздегі ең ерекше күндердің бірі.
+        Жақындарымыздың ортасында махаббатымызды атап өткіміз келеді.
+      </p>
+    </motion.div>
+  </section>
+
+  {/* =====================================
+      COUNTDOWN
+  ====================================== */}
+
+  <section className="countdown-section section">
+    <motion.div {...fadeUp} className="section-inner">
+      <p className="eyebrow light">БАҚЫТТЫ КҮНГЕ ДЕЙІН</p>
+
+      <h2 className="light-title">Тойға дейін</h2>
+
+      <div className="countdown">
+        <CountdownItem
+          value={timeLeft.days}
+          label="КҮН"
+          {...stagger}
+        />
+
+        <div className="countdown-dot">:</div>
+
+        <CountdownItem
+          value={timeLeft.hours}
+          label="САҒАТ"
+          {...stagger}
+        />
+
+        <div className="countdown-dot">:</div>
+
+        <CountdownItem
+          value={timeLeft.minutes}
+          label="МИН"
+          {...stagger}
+        />
+
+        <div className="countdown-dot">:</div>
+
+        <CountdownItem
+          value={timeLeft.seconds}
+          label="СЕК"
+          {...stagger}
+        />
+      </div>
+
+      <div className="countdown-heart">
+        <Heart size={18} fill="currentColor" />
+      </div>
+    </motion.div>
+  </section>
+
+  {/* =====================================
+      DETAILS
+  ====================================== */}
+
+  <section id="details" className="details section">
+    <motion.div {...fadeUp} className="section-inner">
+      <p className="eyebrow">ТОЙ ТУРАЛЫ</p>
+
+      <h2>Кездескенше!</h2>
+
+      <div className="details-grid">
+        <motion.div
+          {...stagger}
+          className="detail-card"
+        >
+          <div className="detail-icon">
+            <CalendarDays size={28} />
+          </div>
+
+          <span>КҮНІ</span>
+
+          <strong>27 қазан 2026</strong>
+
+          <p>Сейсенбі</p>
+        </motion.div>
+
+        <motion.div
+          {...stagger}
+          className="detail-card"
+        >
+          <div className="detail-icon">
+            <MapPin size={28} />
+          </div>
+
+          <span>МЕКЕНЖАЙЫ</span>
+
+          <strong>Yrys</strong>
+
+          <p>Алматы қаласы</p>
+        </motion.div>
+      </div>
+
+      <motion.a
